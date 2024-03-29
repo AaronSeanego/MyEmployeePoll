@@ -1,7 +1,5 @@
 import { useEffect,useState } from 'react';
-// import logo from './logo.svg';
 import './App.css';
-// import UserLogin from './components/login';
 import UserLogin from './components/login';
 import * as API from './data/_DATA';
 import { handleGetUser } from './actions/login';
@@ -16,10 +14,13 @@ import LeaderBoard from './components/leaderboard';
 import CreatePolls from './components/polls';
 
 function App(props) {
-  useEffect(() => {
-    props.dispatch(handleInitialData(props.store))
-  }, []);
+  const [pageURL, setURL] = useState({});
 
+  useEffect(() => {
+    props.dispatch(handleInitialData(props.store)).then(() => {
+      setURL(window.location.pathname);
+    });
+  }, []);
   // if(props.loading == true) {
   //   return <div><h3>Loading.....</h3></div>
   // }

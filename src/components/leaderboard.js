@@ -37,6 +37,8 @@ const LeaderBoard = (props) => {
     useEffect(() => {
         if(props.authedUser === null || undefined) {
             navigate("/");
+        }else {
+            localStorage.setItem("pageURL", window.location.pathname);
         }
     },[]);
 

@@ -7,6 +7,10 @@ import { useNavigate } from 'react-router-dom';
 import {setAuthedUser} from '../actions/authedUser';
 
 const UserLogin = (props) => {
+    // localStorage.setItem("pageURL", window.location.pathname);
+    console.log(localStorage.getItem("pageURL"));
+    // console.log(localStorage.getItem("loginUser"));
+
     const navigate = useNavigate();
     const userNameInput = useRef();
     const passwordInput = useRef();
@@ -17,7 +21,11 @@ const UserLogin = (props) => {
             return alert("Please select a user to login!!!");
         }else {
             props.dispatch(handleLogin(userDropdown.current.value));
-            navigate("/dashboard");
+            if(localStorage.getItem("pageURL") == "/" || undefined) {
+                navigate("/dashboard");
+            }else {
+                navigate(localStorage.getItem("pageURL"));
+            }
         }
     }
 

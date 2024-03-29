@@ -25,7 +25,6 @@ function setOptionData(state = {}, action) {
   }
 
 export function Questions(state = {}, action) {
-    console.log(action);
     if(action.type === RECEIVE_QUESTIONS) {
         return {
             ...state,

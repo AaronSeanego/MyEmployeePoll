@@ -6,8 +6,7 @@ import App from '../App';
 import UserLogin from '../components/login';
 import { Provider } from 'react-redux';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
-import '@testing-library/jest-dom/extend-expect';
-import TestApp from '../components/testUI';
+// import '@testing-library/jest-dom/extend-expect';
 import DashBoard from '../components/dashboard';
 import CreatePolls from '../components/createPolls';
 

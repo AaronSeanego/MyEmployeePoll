@@ -5,8 +5,6 @@ import {GET_USER,ADD_USER,LOG_IN,UPDATE_ANSWER,UPDATE_QUESTION} from '../actions
 function updateUserAnswer(state = {}, action) {
     const { qid, answer } = action;
     const { answers } = state;
-    // console.log(qid, answer);
-    // console.log(answers);
     return { ...state, answers: { ...answers, [qid]: answer } };
   }
   

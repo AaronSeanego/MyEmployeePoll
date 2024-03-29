@@ -19,6 +19,9 @@ const DashBoard = (props) => {
     useEffect(() => {
         if(props.authedUser === null || undefined) {
             navigate("/");
+        }else {
+            localStorage.setItem("loginUser", props.authedUser);
+            localStorage.setItem("pageURL", window.location.pathname);
         }
         byDefault();
     },[]);
@@ -44,7 +47,7 @@ const DashBoard = (props) => {
     function byDefault(evt) {
         document.getElementById("defaultOpen").click();
     }
-
+    
     return (
         <div className="App">
             <SideMenu/>
