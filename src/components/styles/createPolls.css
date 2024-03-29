@@ -1,0 +1,29 @@
+.create-form-container {
+    text-align: center;
+}
+
+.create-polls-wrapper {
+    padding-left: 10px;
+    width: fit-content;
+    background-color: #FFFFFF;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.input-control input {
+    width: 330px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 7px;
+    border: 2px solid #0A0A0A;
+}
+
+.input-control button {
+    width: 330px;
+    height: 30px;
+    background-color: #0A0A0A;
+    border-radius: 7px;
+    border: 0px;
+    color: #FFFFFF;
+}

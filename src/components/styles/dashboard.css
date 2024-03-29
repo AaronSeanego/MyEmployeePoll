@@ -1,0 +1,75 @@
+.main-content {
+    margin-left: 200px;
+    padding-left: 10px;
+    color: #0a0a0a;
+}
+
+.answered-polls-wrapper {
+    text-align: left;
+    background-color: #FFFFFF;
+    padding-left: 5px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+
+.answered-polls-wrapper h3 {
+    text-align: left;
+    color: #0a0a0a;
+}
+
+.unanswered-polls-wrapper {
+    /* background-color: #efefef; */
+}
+
+.unanswered-polls-wrapper h3 {
+    text-align: left;
+    color: #0a0a0a;
+}
+
+
+
+
+
+/* ************************************* */
+
+
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 7px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display:none;
+    padding: 6px 12px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    margin-right: 20px;
+  }

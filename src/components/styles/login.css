@@ -1,0 +1,48 @@
+.login-form-container {
+    margin: 150px auto;
+}
+
+.login-form-wrapper {
+    /* margin-top: 150px; */
+    margin: 150px auto;
+    width: fit-content;
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 7px;
+}
+
+.input-form-control {
+}
+
+.input-form-control input {
+    width: 400px;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #0A0A0A;
+}
+
+.input-form-control select {
+    width: 400px;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #0A0A0A;
+}
+
+.input-form-control button {
+    width: 400px;
+    background-color: #0A0A0A;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

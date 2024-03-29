@@ -1,0 +1,48 @@
+.leaderboard-wrapper {
+}
+
+.leaderboard-content {
+    margin-left: 200px;
+}
+
+.leaderboard {
+    margin: 20px auto;
+    width: 800px;
+    /* border: 2px solid #dddddd; */
+    color: #0A0A0A;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-radius: 13px;
+}
+
+.leaderboard thead {
+    text-align: left;
+}
+
+.leaderboard thead th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+}
+
+.leaderboard tbody tr {
+    width: 300px;
+    background-color: #FFFFFF;
+}
+
+.leaderboard tbody tr td {
+    width: 200px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.leaderboard tbody tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.leaderboard tbody tr td h3 {
+    color: #0A0A0A;
+}

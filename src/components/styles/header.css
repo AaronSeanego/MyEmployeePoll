@@ -1,0 +1,91 @@
+.App-logo {
+    float: left;
+}
+
+.App-header {
+    margin-left: 200px;
+    padding-left: 10px;
+    height: 70px;
+    display:flex;
+    flex-wrap:wrap;
+    flex: content;
+    flex-direction: column;
+}
+
+.App-header h3 {
+    color: black;
+}
+
+.App-header div {
+    margin: auto;
+    width: fit-content;
+}
+
+.App-header input {
+    width: 300px;
+    height: 25px;
+    margin: 20px auto;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    /* border-radius: 7px; */
+    border: 2px solid #0A0A0A;
+}
+
+.App-header button {
+    height: 31px;
+    border: 0px;
+    background-color: #0A0A0A;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    color: #FFFFFF;
+}
+
+.search-div {
+    float: left;
+    left: 300px;
+}
+
+.search-div span {
+    width: fit-content;
+    text-align: right;
+}
+
+.user-avatar {
+    text-align: right;
+}
+
+.header-wrapper {
+    /* background-color: aquamarine; */
+}
+
+.header-wrapper span {
+    margin-left: 800px;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-wrapper span img {
+    float: left;
+    margin-left: 20px;
+    margin-top: 0px;
+    /* margin-left: 600px; */
+}
+
+.header-wrapper span h3 {
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* margin-left: 600px; */
+}
+
+.header-wrapper span button {
+    float: left;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    margin-left: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* margin-left: 600px; */
+}

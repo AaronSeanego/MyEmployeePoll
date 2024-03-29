@@ -1,0 +1,61 @@
+.side-menu {
+    /* background-color:blueviolet; */
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+    width: 200px;
+    /* display:inline; */
+    /* background-color: darkmagenta; */
+    background-color: #0A0A0A;
+    height: 100%;
+    overflow: auto;
+}
+
+.side-menu-container {
+
+}
+
+.side-menu-header {
+    height: 50px;
+    display: flow-root;
+    padding-top: 20px;
+}
+
+.side-menu-header h3 {
+    font-size: 16px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+.side-menu-body {
+
+}
+
+.side-menu-list {
+    text-decoration: none;
+    list-style:none;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.side-menu-list-item {
+    text-decoration:none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration:none;
+    color: white;
+}
+
+a:hover {
+    text-decoration:none;
+    color: rgb(68, 249, 36);
+}
+
+AiFillSignal {
+    color: #FFFFFF;
+}

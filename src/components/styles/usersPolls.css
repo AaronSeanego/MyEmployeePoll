@@ -1,0 +1,10 @@
+.main-content-data {
+    margin-left: 0px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}

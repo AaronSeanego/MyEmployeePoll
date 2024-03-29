@@ -1,0 +1,55 @@
+.polls-content {
+    margin-left: 200px;
+}
+
+.polls-header {
+    text-align: center;
+}
+
+.polls-body {
+    display: flex;
+}
+
+.poll-list-wrapper {
+    background-color: #FFFFFF;
+    width: 30%;
+    padding: 20px;
+    border-radius: 7px;
+    margin: 10px auto;
+}
+
+.question-status {
+    margin-top: 10px;
+    display: flex;
+}
+
+.votes-div {
+    padding: 5px;
+    background-color: #fe5f3728;
+    border-radius: 15px;
+    width: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* display: flex; */
+}
+
+.votes-div h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: fit-content;
+    float: right;
+    color: #FE5E37;
+}
+
+.data-div {
+    display: flex;
+}
+
+.date-vote-div {
+    display: flex;
+}
+
+.voted-label {
+    margin-left: 66%;
+    /* background-color: #8ac38932; */
+}
