@@ -1,16 +1,14 @@
-import { useRef } from 'react';
+import { useRef,useEffect } from 'react';
 // import "./styles/login.css";
 import {logIn} from '../actions/login';
 import {handleLogin} from '../actions/login';
 import { connect } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {setAuthedUser} from '../actions/authedUser';
 
 const UserLogin = (props) => {
-    // localStorage.setItem("pageURL", window.location.pathname);
-    console.log(localStorage.getItem("pageURL"));
-    // console.log(localStorage.getItem("loginUser"));
-
+    const location = useLocation();
+    console.log(location);
     const navigate = useNavigate();
     const userNameInput = useRef();
     const passwordInput = useRef();
@@ -21,14 +19,20 @@ const UserLogin = (props) => {
             return alert("Please select a user to login!!!");
         }else {
             props.dispatch(handleLogin(userDropdown.current.value));
-            if(localStorage.getItem("pageURL") == null) {
-                navigate("/dashboard");
-            }else if(localStorage.getItem("pageURL") == "/") {
-                navigate("/dashboard");
-            }else if(localStorage.getItem("pageURL") == undefined) {
+            // if(localStorage.getItem("pageURL") == null) {
+            //     navigate("/dashboard");
+            // }else if(localStorage.getItem("pageURL") == "/") {
+            //     navigate("/dashboard");
+            // }else if(localStorage.getItem("pageURL") == undefined) {
+            //     navigate("/dashboard");
+            // }else {
+            //     navigate(localStorage.getItem("pageURL"));
+            // }
+
+            if(location.state == null) {
                 navigate("/dashboard");
             }else {
-                navigate(localStorage.getItem("pageURL"));
+                navigate(location.state.prevURL);
             }
         }
     }

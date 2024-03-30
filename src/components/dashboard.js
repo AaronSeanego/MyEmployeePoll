@@ -9,20 +9,36 @@ import UnAnseredPolls from './unansweredpolls';
 import HeaderTag from './header';
 import SideMenu from "./sidemenu";
 import './styles/dashboard.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import UserLogin from "../components/login";
 import ConnectedUsersPolls from '../components/usersPolls';
 
 const DashBoard = (props) => {
     const navigate = useNavigate();
+    const location = useLocation();
     let result;
+
+    const detectURLChanges = () => {
+        window.onhashchange = function() {
+            alert("hashtag changed");
+        };
+      }
+    
+    detectURLChanges();
+
     const autherUserData = Object.values(props.users).filter((user) => user.id === props.authedUser);
     useEffect(() => {
         if(props.authedUser === null || undefined) {
-            navigate("/");
+            navigate("/", {
+                state: {
+                    prevURL: location.pathname
+                }
+            });
         }else {
             localStorage.setItem("loginUser", props.authedUser);
             localStorage.setItem("pageURL", window.location.pathname);
         }
+          
         byDefault();
     },[]);
 

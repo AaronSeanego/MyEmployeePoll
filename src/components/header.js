@@ -2,17 +2,22 @@ import { useRef } from 'react';
 // import logo from "../logo.svg";
 import './styles/header.css';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation} from 'react-router-dom';
 import { AiFillHome } from "react-icons/ai";
 
 const HeaderTag = (props) => {
+    const location = useLocation();
     const navigate = useNavigate();
     const logOut = () => {
-        navigate("/");
+        navigate("/", {
+            state: {
+                prevURL: location.pathname
+            }
+        });
     };
 
     const setPageURL = (url) => {
-        // localStorage.setItem("pageURL", url);
+        localStorage.setItem("pageURL", url);
         localStorage.removeItem("loginUser");
     };
 

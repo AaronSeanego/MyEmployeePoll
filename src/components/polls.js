@@ -6,7 +6,7 @@ import HeaderTag from './header';
 import SideMenu from './sidemenu';
 import { useParams } from 'react-router-dom';
 import {handleSaveQuestionsAnswer} from '../actions/questions';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation} from 'react-router-dom';
 import {updateUserAnswer} from '../actions/login';
 import { AiFillCheckSquare } from 'react-icons/ai';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
@@ -16,6 +16,7 @@ import { AiFillFile } from "react-icons/ai";
 import { RiFileUnknowFill } from "react-icons/ri";
 
 const Polls = (props) => {
+    const location = useLocation();
     let authedUserData = Object.values(props.users).filter((user) => user.id === props.authedUser);
     const navigate = useNavigate();
     var {id} = useParams();
@@ -25,8 +26,11 @@ const Polls = (props) => {
         if(props.authedUser === null || undefined) {
             localStorage.removeItem("loginUser");
             localStorage.setItem("pageURL", window.location.pathname);
-            navigate("/");
-            console.log("User not logged in");
+            navigate("/", {
+                state: {
+                    prevURL: location.pathname
+                }
+            });
         }
 
         if(id == "undefined") {

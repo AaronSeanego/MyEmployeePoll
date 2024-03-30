@@ -4,10 +4,11 @@ import './styles/createPolls.css';
 import HeaderTag from './header';
 import SideMenu from './sidemenu';
 import { connect } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 
 const CreatePolls = (props) => {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const autherUserData = Object.values(props.users).filter((user) => user.id === props.authedUser);
     const initialQuestionObject = {
@@ -20,7 +21,12 @@ const CreatePolls = (props) => {
 
     useEffect(() => {
         if(props.authedUser === null || undefined) {
-            navigate("/");
+            localStorage.setItem("prevURL", location);
+            navigate("/", {
+                state: {
+                    prevURL: location.pathname
+                }
+            });
         }else {
             localStorage.setItem("pageURL", window.location.pathname);
         }

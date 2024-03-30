@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import HeaderTag from './header';
 import SideMenu from './sidemenu';
 import './styles/leaderboard.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation} from 'react-router-dom';
 
 const LeaderBoard = (props) => {
+    const location = useLocation();
     let usersIDs = Object.keys(props.users);
     const autherUserData = Object.values(props.users).filter((user) => user.id === props.authedUser);
     const navigate = useNavigate();
@@ -34,12 +35,25 @@ const LeaderBoard = (props) => {
     sortUserInfo();
     userInfo.sort((a,b) => b.sum - a.sum);
 
+    const detectURLChanges = () => {
+        window.onhashchange = function() {
+            alert("hashtag changed");
+        };
+      }
+    
+    detectURLChanges();
+
     useEffect(() => {
         if(props.authedUser === null || undefined) {
-            navigate("/");
+            navigate("/", {
+                state: {
+                    prevURL: location.pathname
+                }
+            });
         }else {
             localStorage.setItem("pageURL", window.location.pathname);
         }
+          
     },[]);
 
     return (

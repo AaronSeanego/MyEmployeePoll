@@ -10,7 +10,7 @@ import combineReducers from'./reducers/index';
 import {legacy_createStore } from 'redux';
 import {getUsers} from './reducers/login';
 import applyMiddleware from './middleware/index';
-import { BrowserRouter,Routes} from 'react-router-dom';
+import { BrowserRouter,Routes,Router} from 'react-router-dom';
 import store from './data/store';
 
 // const store = legacy_createStore(combineReducers,applyMiddleware);
