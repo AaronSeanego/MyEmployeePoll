@@ -21,7 +21,11 @@ const UserLogin = (props) => {
             return alert("Please select a user to login!!!");
         }else {
             props.dispatch(handleLogin(userDropdown.current.value));
-            if(localStorage.getItem("pageURL") == "/" || undefined) {
+            if(localStorage.getItem("pageURL") == null) {
+                navigate("/dashboard");
+            }else if(localStorage.getItem("pageURL") == "/") {
+                navigate("/dashboard");
+            }else if(localStorage.getItem("pageURL") == undefined) {
                 navigate("/dashboard");
             }else {
                 navigate(localStorage.getItem("pageURL"));
