@@ -16,12 +16,14 @@ const Page404 = () => {
                         <h1>404</h1>
                         <h2>Page Not Found</h2>
                         <p>The page you are looking for does not exist.</p>
-                        <span style={{backgroundColor: "#8AC389",padding: "8px",borderRadius: "7px"}}>
-                            <AiFillHome style={{color: "#000"}}/>
-                            <span>
-                                <Link to="/" style={{color: "#000"}}>Home</Link>
+                        <Link to="/" style={{color: "#000"}}>
+                            <span style={{backgroundColor: "#8AC389",padding: "8px",borderRadius: "7px"}}>
+                                <AiFillHome style={{color: "#000"}}/>
+                                <span style={{color: "#000"}}>
+                                    Home
+                                </span>
                             </span>
-                        </span>
+                        </Link>
                     </div>
                 </div>
             </div>
